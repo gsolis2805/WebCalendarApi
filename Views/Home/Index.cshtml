@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <button class="btn btn-primary" style="margin-top: 20px;" onclick="location.href = '@Url.Action("OauthRedirect", "Home")'">Ingresar a Google</button>
+    <button class="btn btn-primary" style="margin-top: 20px;" onclick="location.href = '@Url.Action("RefreshToken", "OAuth")'">Renovar Access Token</button>
+    <button class="btn btn-primary" style="margin-top: 20px;" onclick="location.href = '@Url.Action("RevokeToken", "OAuth")'">Revocar Access Token</button>
+    <div id="evento">
+       @{
+            Html.RenderPartial("~/Views/CalendarEvent/CreateEvent.cshtml");
+        }
+    </div>
+
+</div>
+
+

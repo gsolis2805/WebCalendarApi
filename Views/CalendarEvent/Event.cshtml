@@ -1,0 +1,11 @@
+﻿@using Web_Calendar_Api.Models;
+@model Event
+
+<div>
+    <div style="margin: 30px;" class="row">
+        <p>Sumary: @Model.Summary</p>
+        <p>Description: @Model.Description</p>
+        <p>Start: @(DateTime.Parse(Model.Start.DateTime).ToString("dd-MMM-yyyy hh:mm")) (@Model.Start.TimeZone)</p>
+        <p>End:@(DateTime.Parse(Model.End.DateTime).ToString("dd-MMM-yyyy hh:mm")) (@Model.End.TimeZone)</p>
+    </div>
+</div>
